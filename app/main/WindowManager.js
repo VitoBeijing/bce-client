@@ -19,7 +19,7 @@ export default class WindowManager {
                     titleBarStyle: 'hidden',
                     backgroundColor: '#444c63',
                     minWidth: 700,
-                    minHeight: 500,
+                    minHeight: 500
                 },
                 option,
                 {width, height}

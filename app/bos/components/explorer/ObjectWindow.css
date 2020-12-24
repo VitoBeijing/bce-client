@@ -16,11 +16,22 @@
     display: flex;
     position: absolute;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .nocontent::before {
     font-size: 6em;
     text-align: center;
+}
+
+.emptyicon::before {
+    font-size: 6em;
+    text-align: center;
+    display: inline-block;
+    color: #ddd;
+    width: 200px;
+    height: 60px;
 }
 
 .error {

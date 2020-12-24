@@ -38,10 +38,10 @@ input[type=checkbox]:checked:before {
     border-bottom: solid 2px currentColor;
 }
 
-/* #main .ant-table-tbody > tr > td,
+#main .ant-table-tbody > tr > td,
 #main .ant-table-thead > tr > th {
-    padding: 0;
-    height: 30px;
+    /* padding: 0; */
+    /* height: 30px; */
     border: none;
 }
 
@@ -53,7 +53,21 @@ input[type=checkbox]:checked:before {
 
 #main .ant-table-tbody > tr > td > * {
     vertical-align: middle;
-} */
+}
+
+#main .ant-table-tbody > tr > td .ant-checkbox-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+#main .ant-table-tbody > tr > td .ant-checkbox-checked .ant-checkbox-inner::after {
+    transition: none;
+}
+
+#main .ant-table-tbody > tr > td .ant-checkbox-checked::after {
+    animation: none;
+}
 
 .bce-form.ant-form-inline .ant-form-item {
     margin-bottom: 10px;

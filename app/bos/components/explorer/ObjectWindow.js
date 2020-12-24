@@ -214,9 +214,10 @@ class Window extends Component {
             && objects.length === 0
         ) {
             return (
-                <span className={`fa fa-cloud-upload ${styles.nocontent}`}>
-                    文件夹为空，拖拽文件上传
-                </span>
+                <div className={`${styles.nocontent}`}>
+                    <p className={`fa fa-cloud-upload ${styles.emptyicon}`}></p>
+                    <p>文件夹为空，拖拽文件上传</p>
+                </div>
             );
         }
     }
