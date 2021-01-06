@@ -147,7 +147,7 @@
 }
 
 .extraCol {
-    width: 80px;
+    width: 120px;
 }
 
 .time {
@@ -155,5 +155,5 @@
 }
 
 .extraCol:last-child {
-    width: 120px;
+    width: 130px;
 }
