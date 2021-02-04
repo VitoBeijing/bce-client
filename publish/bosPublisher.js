@@ -61,6 +61,8 @@ function publish(distDir) {
             console.log(err.message);
             return;
         }
+        // 过滤掉win版本未打包的文件
+        entries = entries.filter(entry => !/win-ia32-unpacked/.test(entry.path));
 
         entries.forEach(file => {
             const filename = path.relative(distDir, file.path);
