@@ -9,7 +9,7 @@
 
 ## 使用文档
 
-- [Wiki](https://github.com/mudio/bce-client/wiki)
+- [Wiki](https://github.com/baidubce/bce-client/wiki)
 - [BOS](https://cloud.baidu.com/doc/BOS/index.html)
 
 ## 自动更新
@@ -18,11 +18,11 @@
 
 ## 需求与建议
 
-- [Issue](https://github.com/mudio/bce-client/issues)
+- [Issue](https://github.com/baidubce/bce-client/issues)
 
 ## 版本发布
 
-- [Releases](https://github.com/mudio/bce-client/releases)
+- [Releases](https://github.com/baidubce/bce-client/releases)
 
 ## License
 MIT © BAIDU

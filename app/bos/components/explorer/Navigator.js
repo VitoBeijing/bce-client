@@ -91,11 +91,11 @@ class Navigator extends Component {
         const {bucket} = this.props;
         const inputBucket = target.value.trim();
         // 当前输入的bucket名称是否合法, bucket值为空代表全部文件目录下，否则不做bucket校验
-        const isValidBucket = !bucket
-            ? Array.isArray(buckets) && buckets.some(item => item.value === inputBucket)
-            : true;
+        // const isValidBucket = !bucket
+        //     ? Array.isArray(buckets) && buckets.some(item => item.value === inputBucket)
+        //     : true;
 
-        if (key === 'Enter' && !bucket && inputBucket && isValidBucket) {
+        if (key === 'Enter' && !bucket && inputBucket) {
             event.preventDefault();
 
             this._redirect(inputBucket);
