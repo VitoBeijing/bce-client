@@ -6,13 +6,14 @@
  */
 
 import fs from 'fs';
-import {remote} from 'electron';
+import {remote, ipcRenderer} from 'electron';
 import {notification} from 'antd';
 import {getLogPath} from '../../utils';
 
 export default class SyncLogger {
-    constructor(name) {
-        this.log = remote.getGlobal('log');
+    constructor(name, uuid) {
+        ipcRenderer.send('newLog', uuid);
+        this.log = remote.getGlobal('logMap')[uuid];
         this.log.transports.file.level = 'info';
         this.log.transports.console.level = 'debug';
         this.log.transports.file.maxSize = 100 * 1024 * 1024;

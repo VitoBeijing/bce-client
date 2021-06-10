@@ -149,7 +149,7 @@
     "bce-service-bos-transport": "github:mudio/bce-service-bos-transport",
     "classnames": "^2.2.6",
     "configstore": "^4.0.0",
-    "electron-log": "^3.0.9",
+    "electron-log": "^4.3.5",
     "font-awesome": "^4.7.0",
     "history": "^4.7.2",
     "humanize": "0.0.9",

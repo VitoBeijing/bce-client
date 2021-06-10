@@ -282,7 +282,7 @@ export class Client extends BosClient {
         const {endpoint} = this.config;
         const urlOpt = url.parse(endpoint);
         urlOpt.protocol = 'https';
-        urlOpt.pathname = `/v1/${bucketName}/${objectKey}`;
+        urlOpt.pathname = `/${bucketName}/${objectKey}`;
 
         // 如果是公共读的，则不算签名了
         const objectUrl = url.format(urlOpt);

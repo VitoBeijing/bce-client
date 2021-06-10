@@ -34,7 +34,7 @@ export const startSync = async uuid => {
             window.globalStore.dispatch({type: SYNCDISK_CHANGE_MAPPING, mapping});
         }, 300);
 
-        processers[uuid] = new SyncProcesser(task);
+        processers[uuid] = new SyncProcesser(task, uuid);
         processers[uuid].on('finish', throttled);
         processers[uuid].walkFolder();
         processers[uuid].watchFolder();

@@ -21,10 +21,10 @@ import {getUuid} from '../../utils/helper';
 import {ClientFactory} from '../api/client';
 
 export default class SyncProcesser extends EventEmitter {
-    constructor(task) {
+    constructor(task, uuid) {
         super();
         //  日志打印器
-        this.logger = new SyncLogger(task.localPath);
+        this.logger = new SyncLogger(task.localPath, uuid);
         //  当前任务
         this._task = task;
         //  生成任务进程

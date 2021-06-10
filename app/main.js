@@ -71,6 +71,19 @@ app.on('ready', () => {
     });
     ipcMain.on('sync', (evt, type) => (sync = type));
 
+    ipcMain.on('newLog', (evt, logId) => {
+        // 同步盘需要同时记录
+        if (global.logMap) {
+            global.logMap = Object.assign({
+                [logId]: log.create(logId)
+            }, global.logMap);
+        } else {
+            global.logMap = {
+                [logId]: log.create(logId)
+            };
+        }
+    });
+
     // 启动开发者模式
     if (isDev) {
         const developer = new Development();
